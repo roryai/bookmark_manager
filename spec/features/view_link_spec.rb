@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+
   feature 'Viewing Links' do
     scenario 'see a list of web links on the links list page' do
       Link.create(url: 'http://www.google.com', title: 'Google')
