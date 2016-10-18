@@ -7,7 +7,9 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/links' do
-    erb :links
+    #.all is a datamapper method that collects all data pertaining to this class
+    @links = Link.all
+    erb :'links/index'
   end
   # start the server if ruby file executed directly
   run! if app_file == $0
