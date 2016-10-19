@@ -3,19 +3,16 @@ require_relative '../models/link.rb'
 
 class BookmarkManager < Sinatra::Base
   get '/' do
-    'Hello BookmarkManager!'
+    redirect '/links'
   end
 
   get '/links' do
-    Link.create(url: params[:url], title: params[:title])
     @links = Link.all
     erb :'links/index'
-    # redirect '/links'
   end
 
   post '/links' do
     Link.create(url: params[:url], title: params[:title])
-    @links = Link.all
     redirect '/links'
   end
 
