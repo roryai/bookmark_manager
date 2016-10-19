@@ -1,6 +1,6 @@
 def database_setup
   # this connects the model to the database (on the hard drive)
-  DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
+  DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
   # DataMapper.setup(:default, 'postgres://localhost/bookmark_manager_test')
   # this checks models for validity (checks you've written your code in the correct syntax)
   # and initialises properties (id) with relationships (serial)
