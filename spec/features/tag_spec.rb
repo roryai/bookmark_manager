@@ -4,13 +4,13 @@ feature Tag do
   scenario 'allows a user to add a tag' do
     fill_all
     submit
-    
     expect(page.status_code).to be(200)
   end
 
   scenario 'tags are displayed on the links page' do
-    visit '/links'
-
+    fill_all
+    submit
+    expect(page).to have_text '#test_tag'
   end
 
 

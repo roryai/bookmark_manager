@@ -9,9 +9,7 @@ class Link
    include DataMapper::Resource
 
    property :id, Serial
-   property :title, Text
+   property :title, String
    property :url, String
 
 end
-
-database_setup
