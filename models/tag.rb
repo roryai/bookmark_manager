@@ -4,9 +4,11 @@ require_relative 'database_helpers.rb'
 
 class Tag
 
-   include DataMapper::Resource
+  include DataMapper::Resource
 
-   property :id, Serial
-   property :tag, String
+  has n, :links, :through => Resource
+
+  property :id, Serial
+  property :tag, String
 
 end
