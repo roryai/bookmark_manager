@@ -3,6 +3,7 @@
 ENV['RACK_ENV'] = "test"
 
 require_relative '../models/link'
+require_relative './features/web_helpers.rb'
 require File.join(File.dirname(__FILE__), '..', 'app/app.rb')
 
 require 'capybara'
