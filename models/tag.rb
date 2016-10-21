@@ -9,6 +9,6 @@ class Tag
   has n, :links, :through => Resource
 
   property :id, Serial
-  property :name_of_tag, String
+  property :tag_name_in_database, String
 
 end

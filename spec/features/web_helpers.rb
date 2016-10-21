@@ -6,7 +6,7 @@ end
 
 def fill_all
   fill_link_and_title
-  fill_in 'tag_name', :with => '#test_tag'
+  fill_in 'tag_name_inputted_in_view', :with => '#test_tag'
 end
 
 def submit
